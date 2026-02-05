@@ -1,0 +1,219 @@
+.about-container {
+    background: linear-gradient(135deg, #f8faff 0%, #eef3ff 100%);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.about-hero {
+    max-width: 850px;
+    padding: 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+}
+
+.brand {
+    color: #0078ff;
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.feature-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(157, 0, 255, 0.3);
+    width: 280px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at top left, rgba(198, 2, 252, 0.16), transparent 60%);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(174, 0, 255, 0.9);
+}
+
+.feature-icon {
+    font-size: 2.3rem;
+    margin-bottom: 0.8rem;
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotate(8deg) scale(1.1);
+}
+
+.blue {
+    color: #0078ff;
+}
+
+.purple {
+    color: #a259ff;
+}
+
+.yellow {
+    color: #ffb400;
+}
+
+/* Mission Section */
+.mission {
+    max-width: 750px;
+    margin-bottom: 60px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.mission h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.mission-icon {
+    color: #ff5757;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.mission p {
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(135deg, #0078ff 0%, #4b9fff 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 20px rgba(0, 120, 255, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 120, 255, 0.6);
+}
+
+.cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.3px;
+}
+
+.cta p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Credit Line */
+.credit-line {
+    font-size: 0.95rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+    padding-top: 0.8rem;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Spinner */
+.loading-spinner {
+    margin: 50px auto;
+    border: 5px solid #e0e0e0;
+    border-top: 5px solid #0078ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Credits */
+.credits-line {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}
